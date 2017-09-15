@@ -15,5 +15,5 @@ insert into todos (title, priority, created_at, completed_at) values ('wake up',
 
 select * from todos where completed_at is null;
 select * from todos where priority > 1;
-update * todos set completed_at = now() where id = 2;
-delete * from todos where completed_at is not null;
+update todos set completed_at = now() where id = 2;
+delete from todos where completed_at is not null;
