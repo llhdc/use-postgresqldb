@@ -22,4 +22,4 @@ insert into todos (title, priority, created_at, completed_at) values ('drink pro
 select * from todos where completed_at is null and priority = 3;
 select priority, count(completed_at is null) from todos group by priority order by priority;
 select priority, count(*) from todos where created_at > current_date - 30 group by priority;
-select * from todos where completed_at is null and priority = 5 order by created_at limit 1;
+select * from todos where completed_at is null order by priority desc, created_at limit 1;
